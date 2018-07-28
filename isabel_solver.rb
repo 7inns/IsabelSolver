@@ -23,9 +23,10 @@ def getLineSubset( arr, len )
   return [[x]] if x == len
   ar = arr.drop(1)
   getLineSubset( ar, len-x )
-    .each{ |a| a.unshift x }
-    .concat getLineSubset( ar, len )
+  .each{ |a| a.unshift x }
+  .concat getLineSubset( ar, len )
 end
+
 
 # Output the set of square sets dividing the area size inputed.
 print 'Input the area size of gold bar : '
